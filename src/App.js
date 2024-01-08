@@ -1,10 +1,14 @@
+import React from 'react';
+import Dictionary from './components/Dictionary';
 import Footer from './components/Footer';
-import './style/App.css';
+import './styles/App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>
+      <main>
+        <Dictionary />
+      </main>
       <Footer />
     </div>
   );
