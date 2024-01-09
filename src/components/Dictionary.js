@@ -9,30 +9,34 @@ const Dictionary = () => {
 
   const handleResponse = (response) => {
     setResults(response.data);
-  }
+  };
 
   const search = (e) => {
     e.preventDefault();
-    const apiKey = "4efbbf43t600f8b07428238a0a4o0852"
-    const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyWord}&key=${apiKey}`
-    
+    const apiKey = "4efbbf43t600f8b07428238a0a4o0852";
+    const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyWord}&key=${apiKey}`;
+
     axios.get(apiUrl).then(handleResponse);
   };
 
   const handleKeyWordChange = (e) => {
     setKeyWord(e.target.value);
-  }
+  };
 
   return (
     <div className="dictionary-container">
-      <h1>Dictionary</h1>
+      <div class="container-h1">
+        <div class="typewriter">
+          <h1 class=" typed">Dictionary</h1>
+        </div>
+      </div>
       <form onSubmit={search}>
-        <input type="search" onChange={handleKeyWordChange}/>
+        <input type="search" onChange={handleKeyWordChange} />
         <input type="submit" value="Search" />
-        <Results results={results}/>
+        <Results results={results} />
       </form>
     </div>
   );
-}
+};
 
 export default Dictionary;

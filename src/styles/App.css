@@ -1,5 +1,60 @@
-.App {
-  text-align: center;
+.app-container {
+  background-attachment: fixed;
+  background-image: url(/public/background2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Source Code Pro', monospace;
+  padding: 60px;
   letter-spacing: 0.06rem;
+  text-align: center;
+}
+
+.app-content {
+  background-color: rgba(237, 237, 237, 0.9);
+  border-radius: 35px;
+  color: white;
+  color: black;
+  margin: 20px auto;
+  max-width: 75%;
+  padding: 40px;
+}
+
+.typewriter h1 {
+  max-width: fit-content;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15rem solid black;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  animation:
+    typing 6.5s steps(70, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--secondary-color)
+  }
 }
