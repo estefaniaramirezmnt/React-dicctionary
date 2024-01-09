@@ -8,7 +8,6 @@ const Dictionary = () => {
   const [results, setResults] = useState(null);
 
   const handleResponse = (response) => {
-    console.log(response.data);
     setResults(response.data);
   }
 
