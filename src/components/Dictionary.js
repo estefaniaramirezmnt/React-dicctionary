@@ -27,14 +27,24 @@ const Dictionary = () => {
     <div className="dictionary-container">
       <div class="container-h1">
         <div class="typewriter">
-          <h1 class=" typed">Dictionary</h1>
+          <h1 class=" typed">DICTIONARY</h1>
         </div>
       </div>
-      <form onSubmit={search}>
-        <input type="search" onChange={handleKeyWordChange} />
-        <input type="submit" value="Search" />
-        <Results results={results} />
+      <form onSubmit={search} className="search-form">
+        <input 
+          type="search" 
+          onChange={handleKeyWordChange} 
+          placeholder="Search for a word..."
+          autoFocus={true}
+          className="search-type"
+        />
+        <input 
+          type="submit" 
+          value="Search" 
+          className="search-button"
+        />
       </form>
+      <Results results={results} />
     </div>
   );
 };
