@@ -16,7 +16,7 @@ const Dictionary = () => {
     e.preventDefault();
     const apiKey = "4efbbf43t600f8b07428238a0a4o0852"
     const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyWord}&key=${apiKey}`
-    // const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyWord}`;
+    
     axios.get(apiUrl).then(handleResponse);
   };
 
