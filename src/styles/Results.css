@@ -1,11 +1,11 @@
 .results-container section {
     background-color: rgba(215, 180, 202, 0.5);
-    border-radius: 35px;
+    border-radius: 10px;
     color: white;
     color: black;
     margin: 20px auto;
     max-width: 75%;
-    padding: 20px 30px;
+    padding: 5px 30px;
 }
 
 .searched-word {

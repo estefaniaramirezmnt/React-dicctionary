@@ -1,6 +1,7 @@
 import React from "react";
 import Examples from "./Examples";
 import Synonyms from "./Synonyms";
+import "../styles/Meaning.css";
 
 const Meaning = (props) => {
   return (

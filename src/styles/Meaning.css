@@ -1,0 +1,30 @@
+.meaning-container h3 {
+    color: #DE925B;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.meaning-container p {
+    font-size: 1rem;
+    margin-top: 0px;
+}
+
+.examples-container strong {
+    color: #787A39;
+}
+
+.synonyms-container strong {
+    color: #79317A;
+}
+
+.synonyms-container ul {
+    list-style-type: none;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding: 0px;
+}
+
+.synonyms-container li {
+    display: inline-block;
+    margin: 0px 15px;
+}
