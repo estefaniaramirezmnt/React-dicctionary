@@ -1,3 +1,26 @@
-footer p {
-    margin: 0;
-  }
+.footer-container {
+  margin-top: 50px;
+}
+
+.footer-container p {
+  color: #79317A;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 50px;
+}
+
+.footer-container a {
+  color: #787A39;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-container a:hover {
+  color: #DE925B;
+}  
+
+.footer-container a:visited {
+  color: #787A39;
+}
