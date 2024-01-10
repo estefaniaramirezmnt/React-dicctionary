@@ -30,6 +30,7 @@ const Dictionary = () => {
           <h1 class=" typed">DICTIONARY</h1>
         </div>
       </div>
+      <section className="form-container">
         <form onSubmit={search} className="search-form">
           <input
             type="search"
@@ -44,6 +45,7 @@ const Dictionary = () => {
             className="search-button" 
           />
         </form>
+      </section>
       <Results results={results} />
     </div>
   );

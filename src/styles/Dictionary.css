@@ -40,8 +40,15 @@
     }
 }
 
+.form-container {
+    border-radius: 10px;
+    margin: 0px auto;
+    max-width: 75%;
+}
+
 .search-form input {
     border-radius: 10px;
+    display: inline-block;
     font-family: 'Source Code Pro', monospace;
     font-size: 1.2rem;
     font-weight: 500;
@@ -52,7 +59,8 @@
     background-color: #d7b4ca;
     border: 2px solid #79317A;
     color: #79317A;
-    padding: 15px 90px 15px 25px;
+    padding: 15px;
+    width: 60%;
 }
 
 .search-type:focus {
