@@ -9,7 +9,7 @@
     /* The typwriter cursor */
     white-space: nowrap;
     /* Keeps the content on a single line */
-    margin: 30px auto;
+    margin: 0px auto;
     /* Gives that scrolling effect as the typing happens */
     animation:
         typing 6.5s steps(70, end),
@@ -41,20 +41,18 @@
 }
 
 .search-form input {
-    border-radius: 40px;
+    border-radius: 20px;
     font-family: 'Source Code Pro', monospace;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 500;
     margin: 20px;
-    overflow-x: auto;
-    white-space: nowrap;
 }
 
 .search-type {
     background-color: #d7b4ca;
-    border: 2px solid #d7b4ca;
-    padding: 15px 45px 15px;
-
+    border: 2px solid #8C2566;
+    color: #8C2566;
+    padding: 15px 90px 15px 25px;
 }
 
 .search-type:focus {
@@ -66,16 +64,14 @@
 }
 
 .search-button {
-    background-color: #d7b4ca;
-    border: 2px solid #d7b4ca;
-    color: #8C2566;
-    padding: 15px 45px;
+    background-color: #8C2566;
+    border: 3px solid #8C2566;
+    padding: 15px 25px;
     transition: all 0.3s ease-in-out;
 }
 
 .search-button:hover {
-    background-color: #8C2566;
-    border: 2px solid #8C2566;
-    color: #d7b4ca;
-    cursor: pointer;
+    background-color: #d7b4ca;
+    border: 3px solid #8C2566;
+    color: #8C2566;
 }

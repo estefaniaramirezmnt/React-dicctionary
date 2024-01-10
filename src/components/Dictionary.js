@@ -30,20 +30,20 @@ const Dictionary = () => {
           <h1 class=" typed">DICTIONARY</h1>
         </div>
       </div>
-      <form onSubmit={search} className="search-form">
-        <input 
-          type="search" 
-          onChange={handleKeyWordChange} 
-          placeholder="Search for a word..."
-          autoFocus={true}
-          className="search-type"
-        />
-        <input 
-          type="submit" 
-          value="Search" 
-          className="search-button"
-        />
-      </form>
+        <form onSubmit={search} className="search-form">
+          <input
+            type="search"
+            onChange={handleKeyWordChange}
+            placeholder="Type a word..."
+            autoFocus={true}
+            className="search-type"
+          />
+          <input 
+            type="submit" 
+            value="🔍" 
+            className="search-button" 
+          />
+        </form>
       <Results results={results} />
     </div>
   );

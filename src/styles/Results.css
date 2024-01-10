@@ -1,0 +1,32 @@
+.results-container section {
+    background-color: rgba(215, 180, 202, 0.5);
+    border-radius: 35px;
+    color: white;
+    color: black;
+    margin: 20px auto;
+    max-width: 75%;
+    padding: 20px 30px;
+}
+
+.searched-word {
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+.searched-word h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0px 5px;
+}
+
+.searched-word h2::first-letter {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+span {
+    color: #787A39;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0px 5px;
+}
