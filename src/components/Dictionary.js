@@ -9,25 +9,10 @@ import "../styles/Dictionary.css";
 const Dictionary = () => {
   const [keyWord, setKeyWord] = useState("");
   const [results, setResults] = useState(null);
-  // const [loaded, setLoaded] = useState(false);
   const [photos, setPhotos] = useState(null);
 
-  // function handleDictionaryResponse(response) {
-  //   if (response.data.word === undefined) {
-  //     alert("We cannot find that word! Sorry! 😟");
-  //     return null;
-  //   } else {
-  //     setResults(response.data);
-  //     setLoaded(true);
-  //   }
-  // }
   const handleDictionaryResponse = (response) => {
     setResults(response.data);
-      //   if (response.data.word === undefined) {
-  //     alert("We cannot find that word! Sorry! 😟");
-  //     return null;
-  //   } else {
-  //     setResults(response.data);
   };
 
   const handlePexelsResponse = (response) => {
@@ -38,7 +23,11 @@ const Dictionary = () => {
     e.preventDefault();
     const apiKey = "4efbbf43t600f8b07428238a0a4o0852";
     const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyWord}&key=${apiKey}`;
-    axios.get(apiUrl).then(handleDictionaryResponse);
+    axios.get(apiUrl).then(handleDictionaryResponse).catch((error) => {
+      if (error.response.status === 500) {
+        alert("Sorry, something went wrong. Check if you have entered a valid word or try again later.");
+      }
+    });
 
     let pexelsApiKey =
       "OwXO0PG5GnuEB3PXMCbam3BJK5EcC67jxGjja8t4RxHENwp9ataHreFY";
