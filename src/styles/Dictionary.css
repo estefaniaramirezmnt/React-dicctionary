@@ -46,7 +46,8 @@
     max-width: 75%;
 }
 
-.search-form input {
+.search-form input,
+.search-button {
     border-radius: 10px;
     display: inline-block;
     font-family: 'Source Code Pro', monospace;
@@ -74,6 +75,7 @@
 .search-button {
     background-color: #79317A;
     border: 3px solid #79317A;
+    color: #DE925B;
     padding: 15px 25px;
     transition: all 0.3s ease-in-out;
 }

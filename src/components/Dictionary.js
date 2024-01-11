@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Dictionary.css";
 
 const Dictionary = () => {
@@ -23,6 +25,8 @@ const Dictionary = () => {
     setKeyWord(e.target.value);
   };
 
+  const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />
+
   return (
     <div className="dictionary-container">
       <div class="container-h1">
@@ -39,11 +43,7 @@ const Dictionary = () => {
             autoFocus={true}
             className="search-type"
           />
-          <input 
-            type="submit" 
-            value="🔍" 
-            className="search-button" 
-          />
+          <button type="submit" className="search-button">{searchIcon}</button>
         </form>
       </section>
       <Results results={results} />
