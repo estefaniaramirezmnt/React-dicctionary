@@ -30,6 +30,7 @@
 
 import React from "react";
 import Meaning from "./Meaning";
+import Photos from "./Photos";
 import "../styles/Results.css";
 
 const Results = (props) => {
@@ -60,6 +61,7 @@ const Results = (props) => {
             <Meaning meaning={meaning} />
           </section>
         ))}
+        <Photos photos={props.photos} />
       </div>
     );
   } else {

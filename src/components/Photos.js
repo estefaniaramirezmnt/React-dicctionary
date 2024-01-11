@@ -4,7 +4,7 @@ import "../styles/Photos.css";
 const Photos = (props) => {
   if (props.photos) {
     return (
-      <section className="photos-container">
+      <div className="photos-container">
           {props.photos.map((photo, index) => (
             <div className="photo-content" key={index}>
               <a
@@ -20,7 +20,7 @@ const Photos = (props) => {
               </a>
             </div>
           ))}
-      </section>
+      </div>
     );
   } else {
     return null;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
-import Photos from "./Photos";
+// import Photos from "./Photos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Dictionary.css";
@@ -23,6 +23,11 @@ const Dictionary = () => {
   // }
   const handleDictionaryResponse = (response) => {
     setResults(response.data);
+      //   if (response.data.word === undefined) {
+  //     alert("We cannot find that word! Sorry! 😟");
+  //     return null;
+  //   } else {
+  //     setResults(response.data);
   };
 
   const handlePexelsResponse = (response) => {
@@ -72,8 +77,8 @@ const Dictionary = () => {
           </button>
         </form>
       </section>
-      <Results results={results} />
-      <Photos photos={photos} />
+      <Results results={results} photos={photos} />
+      {/* <Photos photos={photos} /> */}
     </div>
   );
 };
