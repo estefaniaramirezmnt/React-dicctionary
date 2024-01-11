@@ -5,9 +5,8 @@ const Photos = (props) => {
   if (props.photos) {
     return (
       <section className="photos-container">
-        <div className="">
           {props.photos.map((photo, index) => (
-            <div className="col-4" key={index}>
+            <div className="photo-content" key={index}>
               <a
                 href={photo.src.original}
                 target="_blank"
@@ -15,13 +14,12 @@ const Photos = (props) => {
               >
                 <img
                   src={photo.src.landscape}
-                  className="img-fluid"
+                  className="photo-example"
                   alt={photo.photographer}
                 />
               </a>
             </div>
           ))}
-        </div>
       </section>
     );
   } else {
