@@ -1,20 +1,24 @@
-.app-container {
+body {
   background-attachment: fixed;
   background-image: url(/public/background2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Source Code Pro', monospace;
-  padding: 60px;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.06rem;  
+  margin: 0; 
+  padding: 0;
   text-align: center;
+}
+
+.app-container {
+  padding: 60px;
 }
 
 .app-content {
   background-color: rgba(237, 237, 237, 0.9);
   border-radius: 10px;
-  color: white;
-  color: black;
+  color: black; 
   margin: 20px auto;
   max-width: 75%;
   padding: 40px;
