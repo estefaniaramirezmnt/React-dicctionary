@@ -9,7 +9,7 @@ import "../styles/Dictionary.css";
 const Dictionary = () => {
   const [keyWord, setKeyWord] = useState("");
   const [results, setResults] = useState(null);
-  const [loaded, setLoaded] = useState(false);
+  // const [loaded, setLoaded] = useState(false);
   const [photos, setPhotos] = useState(null);
 
   // function handleDictionaryResponse(response) {
