@@ -1,6 +1,7 @@
 .meaning-container h3 {
     color: #DE925B;
     font-size: 1.1rem;
+    margin-top: 25px;
     margin-bottom: 5px;
 }
 
@@ -27,4 +28,26 @@
 .synonyms-container li {
     display: inline-block;
     margin: 0px 20px;
+}
+
+
+@media (max-width: 900){
+    .meaning-container h3 {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .meaning-container h3 {
+        font-size: 0.8rem;
+    }
+
+    .meaning-container p,
+    .synonyms-container strong,
+    .examples-container strong,
+    .synonyms-container li {
+        font-size: 0.8rem;
+    }
+
 }

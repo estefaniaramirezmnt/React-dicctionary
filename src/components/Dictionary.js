@@ -78,7 +78,7 @@ const Dictionary = (props) => {
             autoFocus={true}
             className="search-type"
           />
-          <button type="submit" className="search-button btn btn-secondary">
+          <button type="submit" className="search-button">
             {searchIcon}
           </button>
         </form>

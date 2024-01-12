@@ -28,10 +28,15 @@
     transform: scale(1.2);
 }
   
-  /* Media Query para pantallas pequeñas */
-  @media screen and (max-width: 900px) {
+  @media (max-width: 950px) {
     .photos-container {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   
+  @media (max-width: 650px) {
+    .photos-container {
+      grid-template-columns: repeat(1, 1fr);
+      width: 70%;
+    }
+  }
