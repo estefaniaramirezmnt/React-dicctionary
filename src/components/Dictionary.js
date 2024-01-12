@@ -41,6 +41,10 @@ const Dictionary = (props) => {
     axios
       .get(apiUrl)
       .then(handleDictionaryResponse)
+      .catch((error) => {
+        if (error.response.status === 500) {
+          alert("Sorry, something went wrong. Check if you have entered a valid word or try again later.");
+        }});
   };
 
   const handleSubmit = (e) => {
@@ -70,7 +74,7 @@ const Dictionary = (props) => {
             type="search"
             onChange={handleKeyWordChange}
             value={value}
-            placeholder="Type a word..."
+            placeholder="Type a word to search..."
             autoFocus={true}
             className="search-type"
           />
