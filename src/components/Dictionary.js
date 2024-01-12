@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
-import Photos from "./Photos";
+// import Photos from "./Photos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Dictionary.css";
@@ -83,8 +83,8 @@ const Dictionary = (props) => {
           </button>
         </form>
       </section>
-      <Results results={results} photos={photos} />
-      <Photos photos={photos} />
+      <Results results={results} photos={photos}/>
+      {/* <Photos photos={photos} /> */}
     </div>
   );
   } else {
