@@ -6,28 +6,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Dictionary.css";
 
-const Dictionary = () => {
-  const [keyWord, setKeyWord] = useState("");
+const Dictionary = (props) => {
+  const [keyWord, setKeyWord] = useState(props.defaultKeyWord);
+  const [loaded, setLoaded] = useState(false);
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
+  const [value, setValue] = useState("");
+
+  const handlePexelsResponse = (response) => {
+    setPhotos(response.data.photos);
+  };
 
   const handleDictionaryResponse = (response) => {
     setResults(response.data);
-  };
-
-  const handlePexelsResponse = (response) => {
-    setPhotos(response.data.photos);  
-  };
-
-  const search = (e) => {
-    e.preventDefault();
-    const apiKey = "4efbbf43t600f8b07428238a0a4o0852";
-    const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyWord}&key=${apiKey}`;
-    axios.get(apiUrl).then(handleDictionaryResponse).catch((error) => {
-      if (error.response.status === 500) {
-        alert("Sorry, something went wrong. Check if you have entered a valid word or try again later.");
-      }
-    });
 
     let pexelsApiKey =
       "OwXO0PG5GnuEB3PXMCbam3BJK5EcC67jxGjja8t4RxHENwp9ataHreFY";
@@ -39,12 +30,33 @@ const Dictionary = () => {
       .then(handlePexelsResponse);
   };
 
+  const load = () => {
+    setLoaded(true);
+    search();
+  }
+
+  const search = () => {
+    const apiKey = "4efbbf43t600f8b07428238a0a4o0852";
+    const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyWord}&key=${apiKey}`;
+    axios
+      .get(apiUrl)
+      .then(handleDictionaryResponse)
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    search();
+    setValue("");
+  }
+
   const handleKeyWordChange = (e) => {
     setKeyWord(e.target.value);
+    setValue(e.target.value);
   };
 
   const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 
+  if (loaded) {
   return (
     <div className="dictionary-container">
       <div class="container-h1">
@@ -53,10 +65,11 @@ const Dictionary = () => {
         </div>
       </div>
       <section className="form-container">
-        <form onSubmit={search} className="search-form">
+        <form onSubmit={handleSubmit} className="search-form">
           <input
             type="search"
             onChange={handleKeyWordChange}
+            value={value}
             placeholder="Type a word..."
             autoFocus={true}
             className="search-type"
@@ -70,6 +83,10 @@ const Dictionary = () => {
       <Photos photos={photos} />
     </div>
   );
+  } else {
+    load();
+    return "Loading...";
+  }
 };
 
 export default Dictionary;

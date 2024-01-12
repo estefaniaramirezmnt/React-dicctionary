@@ -8,7 +8,7 @@ function App() {
     <div className="app-container">
       <div className="app-content">
         <main>
-          <Dictionary />
+          <Dictionary defaultKeyWord="dictionary"/>
         </main>
         <Footer />
       </div>
